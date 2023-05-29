@@ -1,0 +1,15 @@
+{
+  "name": "certihain",
+  "version": "1.0.0",
+  "description": "CertiChain is a blockchain based certificate generation web app works on Ethereum Blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "author": "Mihir Jadhav",
+  "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

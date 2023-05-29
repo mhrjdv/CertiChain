@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.4/web3.min.js"></script>
+  <script src="javascripts/app.js"></script>
+  <script src="javascripts/web3.min.js"></script>
+  <link rel='stylesheet' href='stylesheets/style.css' />
+  <link rel='stylesheet' href='stylesheets/searchStyle.css' />
+  <link href="https://www.dafontfree.net/embed/bm93LWJvbGQmZGF0YS81MC9uLzMxNDMxL05vdy1Cb2xkLm90Zg" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script>
+    function getCertificateDetails() {
+      certificateID = document.getElementById("certificateID").value;
+      myContract.methods.certificateDetails(certificateID)
+        .call({ from: ethereum.selectedAddress })
+        .then((result) => {
+          console.log(result);
+          localStorage.setItem("certificateID", certificateID);
+          localStorage.setItem("cadndidateName", result.cadndidateName);
+          localStorage.setItem("courseName", result.courseName);
+          localStorage.setItem("grade", result.grade);
+          localStorage.setItem("date", result.date);
+
+          var url = "viewCertificate.html";
+          window.location.href = url;
+        })
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="header">
+    <a href="#default" class="logo"><span style="color: #3E516B;" >Certi</span><span style="color: #266BDF;" >Chain</span></a>
+    <div class="header-right">
+      <a class="active" href="index.html">Home</a>
+      <a href="issueCertificate.html">Issue Certificate</a>
+
+    </div>
+  </div>
+
+  <div>
+    <br /><br />
+    <div class="image_logo">
+    <img src="CertiChainLogo.png" width="380" height="380">
+    </div>
+    <br />
+    <div class="login">
+    <button onclick="connectToMetMask()" class="buttonZero"><span>Login </span></button>
+    </div>
+  </div>
+
+
+  <div class="search-box" style="text-align: center;">
+    <input type="text" id="certificateID" name="certificateID" class=""
+      placeholder="Enter Certificate ID to View">
+    <button onclick="getCertificateDetails()" class="icon">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+
+
+
+
+</body>
+
+</html>
