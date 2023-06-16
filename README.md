@@ -15,7 +15,7 @@ CertiChain is a decentralized system built on blockchain technology that enables
 
 ## Setup
 
-1. Clone the repository: `git clone https://github.com/your-username/CertiChain.git`
+1. Clone the repository: `git clone https://github.com/mhrjdv/CertiChain.git`
 2. Install dependencies: `npm install`
 3. Deploy the smart contracts on a local or test Ethereum network.
 4. Update the contract addresses in the front-end files.
