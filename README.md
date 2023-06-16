@@ -1,5 +1,7 @@
 # CertiChain
 
+Hosted on Github Pages https://mhrjdv.github.io/CertiChain/
+
 CertiChain is a decentralized system built on blockchain technology that enables the generation, validation, and verification of tamper-proof digital certificates. The project enhances security, transparency, and trust in the certification process, eliminating the need for a central authority.
 
 ## Features
